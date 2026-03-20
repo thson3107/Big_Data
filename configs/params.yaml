@@ -1,0 +1,48 @@
+seed: 42
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  outputs_dir: outputs
+  figures_dir: outputs/figures
+  tables_dir: outputs/tables
+  models_dir: outputs/models
+  reports_dir: outputs/reports
+preprocessing:
+  min_rows_per_coin: 200
+  winsor_limits: [0.01, 0.99]
+  rolling_windows: [7, 14, 30]
+features:
+  forecast_horizon: 1
+  trend_horizon: 3
+  vol_window: 14
+  bins_updown: [-100, 0, 100]
+  bins_vol: [0.0, 0.015, 0.04, 10.0]
+association:
+  min_support: 0.08
+  min_confidence: 0.55
+  min_lift: 1.05
+  top_k: 20
+clustering:
+  n_clusters: 4
+  random_state: 42
+classification:
+  enabled: true
+  test_size_ratio: 0.2
+  model: gradient_boosting
+  params:
+    n_estimators: 250
+    learning_rate: 0.05
+    max_depth: 3
+forecasting:
+  target_col: close
+  test_horizon: 60
+  walk_forward_step: 1
+  arima_order: [2, 1, 2]
+  ets_trend: add
+  ets_seasonal: null
+visual:
+  palette:
+    stormcloud: "#4F6367"
+    beige: "#EEF5DB"
+    sunset: "#FE5F55"
+  style: seaborn-v0_8-whitegrid

@@ -1,0 +1,19 @@
+{
+  "rows_raw": 37082,
+  "rows_clean": 37082,
+  "rows_featured": 36042,
+  "n_coins": 23,
+  "top_forecast_model": {
+    "model": "Naive",
+    "mae": 681.9701119308336,
+    "rmse": 1215.254252923899
+  },
+  "classification_metrics": {
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "train_seconds": 27.27147126197815,
+    "n_train": 28833,
+    "n_test": 7209
+  }
+}
