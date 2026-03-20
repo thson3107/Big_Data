@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Cai dat
 
 ```bash
@@ -21,3 +22,6 @@ python scripts/run_papermill.py
 ```bash
 python -m streamlit run scripts/run_pipeline.py -- --mode app
 ```
+=======
+# Big_Data
+>>>>>>> 8bd6295b7c8eaddfb10c9694b3cceb6fcfe51fd8
